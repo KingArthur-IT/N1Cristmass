@@ -7,11 +7,18 @@
         padding: 25px 0
         display: flex
         align-items: center
+        transition: padding .3s ease
     &__logo
         margin-right: 100px
+        display: flex
     &__btn
         padding: 10px 29.5px
         margin-left: auto
+    &.fixed .header__hero
+        padding: 20px 0
+    &__burger
+        display: none
+        cursor: pointer
 .menu
     display: flex
     align-items: center
@@ -22,3 +29,55 @@
             transition: color .3s ease
             &:hover
                 color: $primary
+
+@media screen and (max-width: 1630px)
+    .header
+        &__logo
+            margin-right: 25px
+            & svg
+                width: 196px
+    .menu
+        &__item
+            margin-left: 40px
+
+@media screen and (max-width: 960px)
+    .header
+        &__logo
+            margin-right: 20px
+            & svg
+                width: 150px
+        &__hero
+            padding: 15px 0
+        &.fixed .header__hero
+            padding: 15px 0
+    .menu
+        &__item
+            margin-left: 30px
+
+@media screen and (max-width: 720px)
+    .header
+        &__logo
+            & svg
+                width: 118px
+        &__hero
+            padding: 10px 0
+            justify-content: space-between
+        &.fixed .header__hero
+            padding: 10px 0
+        &__btn
+            display: none
+        &__burger
+            display: flex
+    .menu
+        display: none
+
+@media screen and (max-width: 425px)
+    .header
+        &__logo
+            & svg
+                width: 187px
+        &__hero
+            padding: 16px 0
+            justify-content: space-between
+        &.fixed .header__hero
+            padding: 16px 0
