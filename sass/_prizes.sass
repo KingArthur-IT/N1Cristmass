@@ -1,0 +1,133 @@
+.prizes
+    background: $dark
+    padding: 150px 0 250px
+    overflow: hidden
+    background: url("../assets/prizes/design/bg.jpg") no-repeat
+    background-position-y: center
+    background-size: 100% 100%
+    &:before
+        content: ""
+        position: absolute
+        bottom: -100px
+        left: -10%
+        right: -10%
+        height: 200px
+        background: $light
+        transform: rotate(4deg)
+    &:after
+        content: ""
+        position: absolute
+        top: -100px
+        left: -10%
+        right: -10%
+        height: 200px
+        background: $light
+        transform: rotate(4deg)
+    &__hero
+    &__title
+        margin-bottom: 30px
+        text-align: center
+        color: $light
+        text-transform: uppercase
+    &__subtitle
+        margin-bottom: 115px
+        text-align: center
+        color: $light
+    &__item-wrap
+        position: relative
+        max-width: 560px
+        max-height: 270px
+        &::before
+            content: ""
+            position: absolute
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            background: linear-gradient(263.78deg, #FF230A 1.05%, #6A0F05 97.77%)
+            border-radius: 20px
+            transform: rotate(-5deg) translate(-18px, -28px)
+        &:nth-child(4)
+            margin-left: auto
+            margin-right: 230px
+            margin-bottom: 100px
+        &:nth-child(5)
+            margin-left: 230px
+            margin-bottom: 40px
+        &:nth-child(6)
+            margin-left: auto
+        &:nth-child(7)
+            margin-top: -20px
+            margin-bottom: 100px
+        &:nth-child(8)
+            margin: auto
+    &__item
+        background: #F4F4F4
+        box-shadow: 30px 30px 30px rgba(0, 0, 0, 0.4), inset 4px 4px 8px rgba(255, 255, 255, 0.35)
+        border-radius: 20px
+        display: flex
+        max-height: 270px
+    &__img
+        height: 100%
+        transform: translateY(-15%)
+    &__hero
+        padding-top: 25px
+        padding-right: 15px
+    &__price
+        font-family: 'Druk Wide'
+        font-weight: 600
+        color: $primary
+        margin-bottom: 5px
+    &__gift
+        font-family: 'Druk Wide'
+        font-weight: 600
+        color: $dark
+        margin-bottom: 10px
+    &__text
+        & span
+            color: $primary
+    &__white-tree
+        position: absolute
+        top: 0
+        right: 40px
+        z-index: 2
+    &__tree
+        position: absolute
+        bottom: 0
+        right: 0
+    &__box
+        position: absolute
+        bottom: 0
+        left: 0
+    &__frost
+        position: absolute
+        top: 340px
+        left: 41%
+    &__btn
+        margin: auto
+        margin-top: 70px
+
+.grand-prize
+    max-width: 870px
+    max-height: 320px
+    &::before
+        content: 'Grand Prize'
+        color: $light
+        font-family: 'Druk Wide'
+        font-weight: 600
+        font-size: 32px
+        line-height: 120%
+        text-align: right
+        padding: 15px 35px
+        transform: rotate(-5deg) translate(-25px, -55px)
+    & .prizes__item
+        max-height: 320px
+    & .prizes__hero
+        padding-top: 45px
+        padding-right: 30px
+    & .prizes__price
+        font-size: 28px
+    & .prizes__gift
+        font-size: 32px
+    & .prizes__img
+        transform: translateY(-22.5%)
