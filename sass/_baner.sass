@@ -1,0 +1,41 @@
+.baner
+    background: $dark
+    min-height: 100vh
+    overflow-x: hidden
+    &:before
+        content: ""
+        position: absolute
+        bottom: 0
+        left: -10%
+        right: -10%
+        height: 130px
+        background: $light
+        transform: rotate(5deg)
+    &__container
+        display: flex
+        align-items: center
+        padding-top: 250px
+    &__hero
+    &__date
+        font-family: 'Druk Wide'
+        font-weight: 600
+        font-size: 28px
+        line-height: 120%
+        color: $primary
+        margin-bottom: 30px
+    &__title
+        color: $light
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+        margin-bottom: 20px
+    &__text
+        color: $light
+        margin-bottom: 70px
+        max-width: 580px
+    &__main-img
+        position: absolute
+        bottom: 0
+        right: 0
+    &__cubok
+        position: absolute
+        left: 0
+        bottom: 0
