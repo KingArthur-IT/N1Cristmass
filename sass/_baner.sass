@@ -35,6 +35,15 @@
         bottom: 0
         right: 0
         width: 60%
+    &__main-img-720
+        display: none
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 60%
+    &__main-img-375
+        display: none
+        position: absolute
     &__cubok
         position: absolute
         left: 0
@@ -44,3 +53,99 @@
         bottom: 0
         right: 75px
         width: 33%
+
+@media screen and (max-width: 1630px)
+    .baner
+        min-height: 750px
+        &__date
+            font-size: 18px
+            margin-bottom: 20px
+        &__title
+            font-size: 40px
+            margin-bottom: 15px
+        &__cubok
+            width: 280px
+            bottom: -50px
+        &__hero
+            padding-top: 100px
+            padding-bottom: 250px
+
+@media screen and (max-width: 1280px)
+    .baner
+        min-height: 700px
+        &:before
+            transform: rotate(3deg)
+        &__cubok
+            width: 200px
+            bottom: 0px
+
+@media screen and (max-width: 960px)
+    .baner
+        min-height: 650px
+        &:before
+            transform: rotate(2deg)
+            height: 100px
+            bottom: -60px
+        &__hero
+            padding-bottom: 150px
+        &__title
+            font-size: 30px
+            margin-bottom: 10px
+        &__text
+            margin-bottom: 50px
+        &__cubok
+            bottom: -30px
+
+@media screen and (max-width: 720px)
+    .baner
+        min-height: 500px
+        &__hero
+            padding-top: 50px
+        &__cubok
+            bottom: -20px
+            width: 150px
+        &__main-img
+            display: none
+        &__main-img-720
+            display: block
+        &__text
+            max-width: 434px
+
+@media screen and (max-width: 500px)
+    .baner
+        &__main-img
+            display: none
+        &__main-img-720
+            width: 100%
+        &__hero
+            padding-bottom: 300px
+        &__ball
+            width: 50%
+            transform: translateX(-10%)
+        &__cubok
+            right: 0
+            left: auto
+            width: 130px
+@media screen and (max-width: 425px)
+    .baner
+        &__title
+            margin-bottom: 8px
+        &__text
+            margin-bottom: 32px
+        &__main-img-720
+            display: none
+        &__main-img-375
+            display: block
+            width: 100%
+            bottom: 0
+            max-width: 375px
+            left: 50%
+            transform: translateX(-50%)
+        &__ball
+            left: 50%
+            transform: translate(-50%, -40%)
+
+@media screen and (max-width: 350px)
+    .baner
+        &__ball
+            transform: translate(-50%, -50%)

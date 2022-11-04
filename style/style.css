@@ -202,7 +202,7 @@ body {
   .header__logo {
     margin-right: 25px;
   }
-  .header__logo svg {
+  .header__logo a svg {
     width: 196px;
   }
   .menu__item {
@@ -214,7 +214,7 @@ body {
   .header__logo {
     margin-right: 20px;
   }
-  .header__logo svg {
+  .header__logo a svg {
     width: 150px;
   }
   .header__hero {
@@ -229,7 +229,7 @@ body {
 }
 
 @media screen and (max-width: 720px) {
-  .header__logo svg {
+  .header__logo a svg {
     width: 118px;
   }
   .header__hero {
@@ -255,7 +255,7 @@ body {
 }
 
 @media screen and (max-width: 425px) {
-  .header__logo svg {
+  .header__logo a svg {
     width: 187px;
   }
   .header__hero {
@@ -321,6 +321,19 @@ body {
   width: 60%;
 }
 
+.baner__main-img-720 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+}
+
+.baner__main-img-375 {
+  display: none;
+  position: absolute;
+}
+
 .baner__cubok {
   position: absolute;
   left: 0;
@@ -332,6 +345,144 @@ body {
   bottom: 0;
   right: 75px;
   width: 33%;
+}
+
+@media screen and (max-width: 1630px) {
+  .baner {
+    min-height: 750px;
+  }
+  .baner__date {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .baner__title {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+  .baner__cubok {
+    width: 280px;
+    bottom: -50px;
+  }
+  .baner__hero {
+    padding-top: 100px;
+    padding-bottom: 250px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .baner {
+    min-height: 700px;
+  }
+  .baner:before {
+    -webkit-transform: rotate(3deg);
+            transform: rotate(3deg);
+  }
+  .baner__cubok {
+    width: 200px;
+    bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .baner {
+    min-height: 650px;
+  }
+  .baner:before {
+    -webkit-transform: rotate(2deg);
+            transform: rotate(2deg);
+    height: 100px;
+    bottom: -60px;
+  }
+  .baner__hero {
+    padding-bottom: 150px;
+  }
+  .baner__title {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  .baner__text {
+    margin-bottom: 50px;
+  }
+  .baner__cubok {
+    bottom: -30px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .baner {
+    min-height: 500px;
+  }
+  .baner__hero {
+    padding-top: 50px;
+  }
+  .baner__cubok {
+    bottom: -20px;
+    width: 150px;
+  }
+  .baner__main-img {
+    display: none;
+  }
+  .baner__main-img-720 {
+    display: block;
+  }
+  .baner__text {
+    max-width: 434px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .baner__main-img {
+    display: none;
+  }
+  .baner__main-img-720 {
+    width: 100%;
+  }
+  .baner__hero {
+    padding-bottom: 300px;
+  }
+  .baner__ball {
+    width: 50%;
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  .baner__cubok {
+    right: 0;
+    left: auto;
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .baner__title {
+    margin-bottom: 8px;
+  }
+  .baner__text {
+    margin-bottom: 32px;
+  }
+  .baner__main-img-720 {
+    display: none;
+  }
+  .baner__main-img-375 {
+    display: block;
+    width: 100%;
+    bottom: 0;
+    max-width: 375px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .baner__ball {
+    left: 50%;
+    -webkit-transform: translate(-50%, -40%);
+            transform: translate(-50%, -40%);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .baner__ball {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
 }
 
 .conditions {
