@@ -1,0 +1,79 @@
+.why
+    background: $light
+    &__title
+        text-align: center
+        margin-bottom: 30px
+        color: $dark
+        text-transform: uppercase
+    &__subtitle
+        text-align: center
+        margin-bottom: 70px
+        color: $dark
+    &__list
+        display: flex
+        justify-content: space-between
+    &__list-item
+        position: relative
+        background: #fff
+        padding: 70px 50px
+        margin-right: 28px
+        &:first-child
+            border-radius: 60px 0px 0px 0px
+            &::before
+                content: ""
+                position: absolute
+                left: 0
+                bottom: 0
+                background: url("../assets/conditions/design.png") no-repeat
+                width: 172px
+                height: 175px
+                transform: translate(-40%, 40%)
+        &:last-child
+            margin-right: 0
+            border-radius: 0px 0px 60px 0px
+            &::before
+                content: ""
+                position: absolute
+                right: 0
+                top: 0
+                background: url("../assets/conditions/design.png") no-repeat
+                width: 172px
+                height: 175px
+                transform: translate(40%, -40%) rotate(180deg)
+    &__name
+        font-family: 'Druk Wide'
+        font-weight: 600
+        font-size: 32px
+        line-height: 120%
+        color: $dark
+        margin-bottom: 30px
+    &__price
+        font-family: 'Druk Wide'
+        font-weight: 600
+        font-size: 28px
+        line-height: 120%
+        color: $primary
+        height: 70px
+        margin-bottom: 42px
+    &__item
+        position: relative
+        font-weight: 600
+        font-size: 24px
+        line-height: 120%
+        color: $dark
+        margin-bottom: 20px
+        padding-left: 20px
+        &:last-child
+            margin-bottom: 0
+        &::before
+            position: absolute
+            background: $dark
+            content: ""
+            left: 0
+            top: 50%
+            border-radius: 2px
+            width: 5px
+            height: 5px
+            transform: translateY(-50%)
+
+            
