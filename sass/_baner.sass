@@ -1,21 +1,20 @@
 .baner
     background: $dark
-    min-height: 100vh
-    overflow-x: hidden
+    min-height: 850px
+    overflow: hidden
+    padding: 50px 0 0
     &:before
         content: ""
         position: absolute
-        bottom: 0
+        bottom: -100px
         left: -10%
         right: -10%
-        height: 130px
+        height: 200px
         background: $light
-        transform: rotate(5deg)
-    &__container
-        display: flex
-        align-items: center
-        padding-top: 250px
+        transform: rotate(4deg)
     &__hero
+        padding-top: 180px
+        padding-bottom: 350px
     &__date
         font-family: 'Druk Wide'
         font-weight: 600
@@ -35,7 +34,8 @@
         position: absolute
         bottom: 0
         right: 0
+        width: 60%
     &__cubok
         position: absolute
         left: 0
-        bottom: 0
+        bottom: -60px

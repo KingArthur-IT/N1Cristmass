@@ -1,0 +1,80 @@
+.conditions
+    background: $light
+    &__title
+        text-align: center
+        color: $dark
+        text-transform: uppercase
+        margin-bottom: 30px
+    &__subtitle
+        margin-bottom: 70px
+        text-align: center
+    &__list
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-bottom: 70px
+    &__step
+        padding: 0 30px
+        max-width: 365px
+    &__hero
+        position: relative
+        background: #fff
+        filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.05))
+        padding: 30px 50px
+    &__step-title
+        font-family: 'Druk Wide'
+        font-weight: 600
+        font-size: 28px
+        line-height: 120%
+        color: $primary
+        margin-bottom: 38px
+    &__img
+        display: block
+        width: 110px
+        margin: 0 auto
+        margin-bottom: 20px
+    &__step-descr
+        font-weight: 600
+        font-size: 20px
+        line-height: 120%
+        text-align: center
+        color: $dark
+
+.rules-and-eligibility
+    display: flex
+    justify-content: space-between
+    &__item
+        flex-basis: 46%
+    &__title
+        font-family: 'Druk Wide'
+        font-weight: 600
+        color: $dark
+        margin-bottom: 15px
+    &__text
+        font-family: 'Exo 2'
+        font-weight: 400
+        font-size: 16px
+        color: $dark
+
+.first-step
+    border-radius: 60px 0px 0px 0px
+    &::before
+        content: ""
+        position: absolute
+        left: 0
+        bottom: 0
+        background: url("../assets/conditions/design.png") no-repeat
+        width: 172px
+        height: 175px
+        transform: translate(-40%, 40%)
+.last-step
+    border-radius: 0px 0px 60px 0px
+    &::before
+        content: ""
+        position: absolute
+        right: 0
+        top: 0
+        background: url("../assets/conditions/design.png") no-repeat
+        width: 172px
+        height: 175px
+        transform: translate(40%, -40%) rotate(180deg)
