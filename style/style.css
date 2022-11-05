@@ -627,6 +627,9 @@ body {
 }
 
 @media screen and (max-width: 1280px) {
+  .conditions {
+    padding-bottom: 50px;
+  }
   .conditions__subtitle {
     margin-bottom: 50px;
   }
@@ -709,6 +712,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .conditions {
+    padding-bottom: 0;
+  }
   .conditions__list {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -922,6 +928,31 @@ body {
   margin-top: 70px;
 }
 
+.prizes__top-snow {
+  display: none;
+  position: absolute;
+}
+
+.prizes__left-snow {
+  display: none;
+  position: absolute;
+}
+
+.prizes__right-snow {
+  display: none;
+  position: absolute;
+}
+
+.prizes__bottom-snow {
+  display: none;
+  position: absolute;
+}
+
+.prizes__dark-snow {
+  display: none;
+  position: absolute;
+}
+
 .grand-prize {
   min-width: 870px;
   min-height: 320px;
@@ -963,6 +994,11 @@ body {
 }
 
 @media screen and (max-width: 1630px) {
+  .prizes {
+    background: url("../assets/prizes/design/bg-1630.png") no-repeat;
+    background-position-y: center;
+    background-size: 100% 100%;
+  }
   .prizes__item-wrap {
     max-width: 480px;
     max-height: 240px;
@@ -998,6 +1034,45 @@ body {
   }
   .prizes__box {
     width: 300px;
+  }
+  .prizes__top-snow {
+    display: block;
+    left: 200px;
+    top: 200px;
+    width: 38px;
+    height: 38px;
+  }
+  .prizes__left-snow {
+    display: block;
+    left: 90px;
+    top: 30%;
+    width: 90px;
+    height: 90px;
+  }
+  .prizes__right-snow {
+    display: block;
+    width: 35px;
+    height: 35px;
+    right: 170px;
+    top: 38%;
+  }
+  .prizes__bottom-snow {
+    display: block;
+    width: 35px;
+    height: 35px;
+    left: 200px;
+    bottom: 340px;
+  }
+  .prizes__dark-snow {
+    display: block;
+    top: 65%;
+    right: 100px;
+    width: 100px;
+    height: 100px;
+  }
+  .prizes__frost {
+    top: 280px;
+    left: 45%;
   }
   .grand-prize .prizes__img {
     width: 400px;
@@ -1036,6 +1111,33 @@ body {
   }
   .prizes__item-wrap:nth-child(7) {
     margin-bottom: 100px;
+  }
+  .prizes__top-snow {
+    left: 40px;
+    top: 200px;
+  }
+  .prizes__left-snow {
+    left: 90px;
+    top: 30%;
+    width: 50px;
+    height: 50px;
+  }
+  .prizes__right-snow {
+    right: 20px;
+    top: 38%;
+  }
+  .prizes__bottom-snow {
+    left: 100px;
+    bottom: 140px;
+  }
+  .prizes__dark-snow {
+    width: 80px;
+    height: 80px;
+  }
+  .prizes__frost {
+    width: 156px;
+    top: 315px;
+    left: 51%;
   }
   .grand-prize {
     min-width: 680px;
@@ -1076,6 +1178,9 @@ body {
 @media screen and (max-width: 960px) {
   .prizes {
     padding: 150px 0 100px;
+    background: url("../assets/prizes/design/bg-960.png") no-repeat;
+    background-position-y: center;
+    background-size: 100% 100%;
   }
   .prizes:before {
     -webkit-transform: rotate(2deg);
@@ -1119,6 +1224,19 @@ body {
   .prizes__title {
     margin-bottom: 10px;
   }
+  .prizes__btn {
+    margin-top: 50px;
+  }
+  .prizes__dark-snow {
+    width: 75px;
+    height: 75px;
+    right: -5px;
+  }
+  .prizes__frost {
+    width: 100px;
+    top: 410px;
+    left: 67%;
+  }
   .grand-prize {
     min-width: 540px;
     min-height: 240px;
@@ -1157,6 +1275,13 @@ body {
   }
   .prizes__box {
     width: 100px;
+  }
+  .prizes__dark-snow {
+    width: 56px;
+    height: 56px;
+  }
+  .prizes__frost {
+    display: none;
   }
   .grand-prize {
     -webkit-transform: translateX(20px);
@@ -1207,6 +1332,19 @@ body {
     right: 0;
     width: 90px;
   }
+  .prizes__top-snow {
+    left: 30px;
+    top: 90px;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+  }
+  .prizes__bottom-snow {
+    left: 50px;
+    bottom: 140px;
+    width: 24px;
+    height: 24px;
+  }
   .grand-prize {
     -webkit-transform: translateX(0);
             transform: translateX(0);
@@ -1218,6 +1356,14 @@ body {
     font-size: 14px;
     padding: 5px 15px;
     bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .prizes {
+    background: url("../assets/prizes/design/bg-425.png") no-repeat;
+    background-position-y: center;
+    background-size: cover;
   }
 }
 

@@ -108,6 +108,21 @@
     &__btn
         margin: auto
         margin-top: 70px
+    &__top-snow
+        display: none
+        position: absolute
+    &__left-snow
+        display: none
+        position: absolute
+    &__right-snow
+        display: none
+        position: absolute
+    &__bottom-snow
+        display: none
+        position: absolute
+    &__dark-snow
+        display: none
+        position: absolute
 
 .grand-prize
     min-width: 870px
@@ -137,6 +152,9 @@
 
 @media screen and (max-width: 1630px)
     .prizes
+        background: url("../assets/prizes/design/bg-1630.png") no-repeat
+        background-position-y: center
+        background-size: 100% 100%
         &__item-wrap
             max-width: 480px
             max-height: 240px
@@ -163,6 +181,39 @@
             right: 30px
         &__box
             width: 300px
+        &__top-snow
+            display: block
+            left: 200px
+            top: 200px
+            width: 38px
+            height: 38px
+        &__left-snow
+            display: block
+            left: 90px
+            top: 30%
+            width: 90px
+            height: 90px
+        &__right-snow
+            display: block
+            width: 35px
+            height: 35px
+            right: 170px
+            top: 38%
+        &__bottom-snow
+            display: block
+            width: 35px
+            height: 35px
+            left: 200px
+            bottom: 340px
+        &__dark-snow
+            display: block
+            top: 65%
+            right: 100px
+            width: 100px
+            height: 100px
+        &__frost
+            top: 280px
+            left: 45%
     .grand-prize
         & .prizes__img
             width: 400px
@@ -190,6 +241,27 @@
                 margin-bottom: 40px
             &:nth-child(7)
                 margin-bottom: 100px
+        &__top-snow
+            left: 40px
+            top: 200px
+        &__left-snow
+            left: 90px
+            top: 30%
+            width: 50px
+            height: 50px
+        &__right-snow
+            right: 20px
+            top: 38%
+        &__bottom-snow
+            left: 100px
+            bottom: 140px
+        &__dark-snow
+            width: 80px
+            height: 80px
+        &__frost
+            width: 156px
+            top: 315px
+            left: 51%
     .grand-prize
         min-width: 680px
         min-height: 270px
@@ -219,6 +291,9 @@
 @media screen and (max-width: 960px)
     .prizes
         padding: 150px 0 100px
+        background: url("../assets/prizes/design/bg-960.png") no-repeat
+        background-position-y: center
+        background-size: 100% 100%
         &:before
             transform: rotate(2deg)
             height: 100px
@@ -248,6 +323,16 @@
             right: 20px
         &__title
             margin-bottom: 10px
+        &__btn
+            margin-top: 50px
+        &__dark-snow
+            width: 75px
+            height: 75px
+            right: -5px
+        &__frost
+            width: 100px
+            top: 410px
+            left: 67%
     .grand-prize
         min-width: 540px
         min-height: 240px
@@ -276,6 +361,11 @@
             right: 0
         &__box
             width: 100px
+        &__dark-snow
+            width: 56px
+            height: 56px
+        &__frost
+            display: none
     .grand-prize
         transform: translateX(20px)
 
@@ -311,6 +401,17 @@
         &__white-tree
             right: 0
             width: 90px
+        &__top-snow
+            left: 30px
+            top: 90px
+            width: 40px
+            height: 40px
+            z-index: 2
+        &__bottom-snow
+            left: 50px
+            bottom: 140px
+            width: 24px
+            height: 24px
     .grand-prize
         transform: translateX(0)
         min-width: 100%
@@ -319,3 +420,9 @@
             font-size: 14px
             padding: 5px 15px
             bottom: 100px
+
+@media screen and (max-width: 425px)
+    .prizes
+        background: url("../assets/prizes/design/bg-425.png") no-repeat
+        background-position-y: center
+        background-size: cover
