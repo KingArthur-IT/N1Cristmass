@@ -39,6 +39,12 @@ document.querySelector('.mobile-menu__close').addEventListener('click', () => {
     mobileMenu?.classList.remove('opened');
 });
 
+document.querySelectorAll('.mobile-menu__item').forEach(el => {
+    el.addEventListener('click', () => {
+        mobileMenu?.classList.remove('opened');
+    })
+});
+
 //MODAL
 const modal = document.querySelector('.modal');
 const modalForm = document.querySelector('.modal__hero');
