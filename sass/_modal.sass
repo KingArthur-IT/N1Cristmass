@@ -1,0 +1,186 @@
+.modal
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background: url("../assets/modal/bg.png") no-repeat
+    background-size: cover
+    z-index: 100
+    overflow-y: scroll
+    padding-top: 120px
+    display: none
+    opacity: 0
+    transition: opacity .3s ease-in-out
+    &.displayed
+        display: block
+    &.visible
+        opacity: 1
+    &__container
+        height: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+    &__hero
+        max-width: 660px
+        margin: auto
+    &__title
+        margin-bottom: 30px
+        color: $dark
+        text-transform: uppercase
+        text-align: center
+    &__subtitle
+        color: $dark
+        max-width: 623px
+        margin: auto
+        margin-bottom: 30px
+        text-align: center
+    &__form
+        background: #fff
+        padding: 50px
+        margin-bottom: 80px
+    &__tabs
+        display: flex
+        justify-content: space-between
+        align-items: stretch
+        margin-bottom: 30px
+    &__tab-btn
+        font-family: 'Druk Wide'
+        background: #fff
+        padding: 20px 10px
+        color: $dark
+        border: 1px solid $dark
+        transition: background .3s ease, color .3s ease
+        width: 100%
+        &:first-child
+            margin-right: 20px
+        &.active
+            background: $dark
+            color: $light
+    &__text
+        font-family: 'Druk Wide'
+        font-weight: 700
+        text-align: center
+        color: $dark
+        margin-bottom: 20px
+        & span
+            color: $primary
+    &__send-btn
+        width: 100%
+        margin-bottom: 20px
+    &__socials
+        display: flex
+        justify-content: center
+        align-items: center
+    &__social-link
+        padding: 0 8px
+    &__new-partners
+        display: none
+        &.active
+            display: block
+    &__current-partners
+        display: none
+        &.active
+            display: block
+    &__close
+        font-family: 'Exo 2'
+        font-weight: 400
+        font-size: 20px
+        display: flex
+        align-items: center
+        line-height: 1
+        position: absolute
+        right: 0
+        top: -50px
+        cursor: pointer
+        & div
+            margin-right: 20px
+        & svg
+            transform: translateY(2px)
+.input-wrapper
+    position: relative
+    margin-bottom: 15px
+    &.last
+        margin-bottom: 10px
+    & input
+        background: $light
+        border: 1px solid #808191
+        width: 100%
+        color: $dark
+        font-size-adjust: 18px
+        padding: 30px 20px 10px
+        outline-color: $dark
+    & label
+        position: absolute
+        top: 10px
+        left: 20px
+        font-family: 'Exo 2'
+        font-weight: 600
+        font-size: 12px
+        line-height: 14px
+        text-transform: uppercase
+        color: #808191
+        z-index: 2
+    & textarea
+        font-family: 'Exo 2'
+        background: $light
+        border: 1px solid #808191
+        width: 100%
+        color: $dark
+        font-size-adjust: 18px
+        padding: 30px 20px 10px
+        outline-color: $dark
+        resize: none
+
+@media screen and (max-width: 1630px)
+    .modal
+        padding-top: 75px
+        &__hero
+            max-width: 600px
+        &__title
+            margin-bottom: 20px
+        &__subtitle
+            margin-bottom: 20px
+        &__form
+            margin-bottom: 40px
+        &__text
+            margin-bottom: 15px
+        &__send-btn
+            margin-bottom: 15px
+
+@media screen and (max-width: 960px)
+    .modal
+        &__title
+            margin-bottom: 10px
+        &__subtitle
+            margin-bottom: 10px
+        &__hero
+            max-width: 520px
+        &__form
+            padding: 30px 50px
+        &__tabs
+            margin-bottom: 20px
+        &__text
+            margin-bottom: 10px
+    .input-wrapper
+        margin-bottom: 10px
+        &.last
+            margin-bottom: 5px
+
+@media screen and (max-width: 720px)
+    .modal
+        background: url("../assets/modal/bg-720.png") no-repeat
+        background-size: cover
+
+@media screen and (max-width: 425px)
+    .modal
+        background: url("../assets/modal/bg-375.png") no-repeat
+        background-size: cover
+        &__title
+            text-align: left
+        &__subtitle
+            text-align: left
+        &__form
+            padding: 30px 15px
+        &__tab-btn
+            padding: 8px
