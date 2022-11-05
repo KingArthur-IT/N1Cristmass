@@ -1890,6 +1890,9 @@ body {
   .partners__hero {
     margin-left: 16px;
   }
+  .partners__title {
+    margin-right: 15px;
+  }
 }
 
 .footer {
