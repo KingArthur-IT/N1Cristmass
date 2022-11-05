@@ -1972,6 +1972,24 @@ body {
   margin-right: 16px;
 }
 
+.footer__socials a svg path {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.footer__socials a svg:hover path {
+  fill: #FF230A;
+}
+
+a.footer__text {
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+a.footer__text:hover {
+  color: #FF230A;
+}
+
 @media screen and (max-width: 960px) {
   .footer__hero {
     -webkit-box-orient: vertical;
