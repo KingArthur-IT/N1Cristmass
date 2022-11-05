@@ -2404,3 +2404,60 @@ body {
     margin-bottom: 30px;
   }
 }
+
+.mobile-menu {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  width: 400px;
+  background: #101521;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 20;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.mobile-menu.opened {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.mobile-menu__close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 24px;
+  height: 24px;
+}
+
+.mobile-menu__hero {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 100px;
+}
+
+.mobile-menu__item {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mobile-menu__btn {
+  padding: 10px 29.5px;
+}
+
+@media screen and (max-width: 600px) {
+  .mobile-menu {
+    width: 100%;
+  }
+}

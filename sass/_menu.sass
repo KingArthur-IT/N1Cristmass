@@ -1,0 +1,33 @@
+.mobile-menu
+    position: fixed
+    bottom: 0
+    right: 0
+    top: 0
+    width: 400px
+    background: $dark
+    display: flex
+    justify-content: center
+    z-index: 20
+    transition: transform .3s ease
+    transform: translateX(100%)
+    &.opened
+        transform: translateX(0%)
+    &__close
+        position: absolute
+        top: 30px
+        right: 30px
+        width: 24px
+        height: 24px
+    &__hero
+        width: fit-content
+        padding-top: 100px
+    &__list
+    &__item
+        text-align: center
+        margin-bottom: 30px
+    &__btn
+        padding: 10px 29.5px
+
+@media screen and (max-width: 600px)
+    .mobile-menu
+        width: 100%
