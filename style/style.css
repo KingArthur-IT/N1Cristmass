@@ -2288,7 +2288,40 @@ a.footer__text:hover {
   color: #101521;
   font-size-adjust: 18px;
   padding: 30px 20px 10px;
-  outline-color: #101521;
+  outline: none;
+  caret-color: #FF230A;
+}
+
+.input-wrapper input::-webkit-input-placeholder {
+  color: #101521;
+}
+
+.input-wrapper input:-ms-input-placeholder {
+  color: #101521;
+}
+
+.input-wrapper input::-ms-input-placeholder {
+  color: #101521;
+}
+
+.input-wrapper input::placeholder {
+  color: #101521;
+}
+
+.input-wrapper input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.input-wrapper input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.input-wrapper input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.input-wrapper input:focus::placeholder {
+  opacity: 0;
 }
 
 .input-wrapper label {
@@ -2312,7 +2345,7 @@ a.footer__text:hover {
   color: #101521;
   font-size-adjust: 18px;
   padding: 30px 20px 10px;
-  outline-color: #101521;
+  outline: none;
   resize: none;
 }
 

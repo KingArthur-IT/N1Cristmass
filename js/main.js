@@ -81,7 +81,6 @@ document.querySelector('.modal__close')?.addEventListener('click', () => {
 
         // get values
         const companyName = document.getElementById(`${el}-company-name`)?.value;
-        const phone = document.getElementById(`${el}-phone`)?.value;
         const email = document.getElementById(`${el}-email`)?.value;
         const message = document.getElementById(`${el}-message`)?.value;
 
@@ -89,7 +88,6 @@ document.querySelector('.modal__close')?.addEventListener('click', () => {
 
         //clear
         document.getElementById(`${el}-company-name`).value = '';
-        document.getElementById(`${el}-phone`).value = '';
         document.getElementById(`${el}-email`).value = '';
         document.getElementById(`${el}-message`).value = '';
 

@@ -132,7 +132,12 @@
         color: $dark
         font-size-adjust: 18px
         padding: 30px 20px 10px
-        outline-color: $dark
+        outline: none
+        caret-color: $primary
+        &::placeholder
+            color: $dark
+        &:focus::placeholder
+            opacity: 0
     & label
         position: absolute
         top: 10px
@@ -152,7 +157,7 @@
         color: $dark
         font-size-adjust: 18px
         padding: 30px 20px 10px
-        outline-color: $dark
+        outline: none
         resize: none
 
 @media screen and (max-width: 1630px)
