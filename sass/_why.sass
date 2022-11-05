@@ -1,5 +1,7 @@
 .why
     background: $light
+    overflow: hidden
+    padding-top: 0
     &__title
         text-align: center
         margin-bottom: 30px
@@ -17,29 +19,7 @@
         background: #fff
         padding: 70px 50px
         margin-right: 28px
-        &:first-child
-            border-radius: 60px 0px 0px 0px
-            &::before
-                content: ""
-                position: absolute
-                left: 0
-                bottom: 0
-                background: url("../assets/conditions/design.png") no-repeat
-                width: 172px
-                height: 175px
-                transform: translate(-40%, 40%)
-        &:last-child
-            margin-right: 0
-            border-radius: 0px 0px 60px 0px
-            &::before
-                content: ""
-                position: absolute
-                right: 0
-                top: 0
-                background: url("../assets/conditions/design.png") no-repeat
-                width: 172px
-                height: 175px
-                transform: translate(40%, -40%) rotate(180deg)
+        height: 100%
     &__name
         font-family: 'Druk Wide'
         font-weight: 600
@@ -75,3 +55,149 @@
             width: 5px
             height: 5px
             transform: translateY(-50%)
+.why-first-item
+    border-radius: 60px 0px 0px 0px
+    &::before
+        content: ""
+        position: absolute
+        left: 0
+        bottom: 0
+        background: url("../assets/conditions/design.png") no-repeat
+        width: 172px
+        height: 175px
+        transform: translate(-40%, 40%)
+.why-fourth-item
+    margin-right: 0
+    border-radius: 0px 0px 60px 0px
+    &::before
+        content: ""
+        position: absolute
+        right: 0
+        top: 0
+        background: url("../assets/conditions/design.png") no-repeat
+        width: 172px
+        height: 175px
+        transform: translate(40%, -40%) rotate(180deg)
+
+@media screen and (max-width: 1630px)
+    .why
+        &__list-item
+            padding: 50px 25px
+            margin-right: 20px
+        &__name
+            font-size: 28px
+        &__price
+            font-size: 18px
+            margin-bottom: 30px
+            height: 40px
+        &__item
+            font-size: 20px
+
+@media screen and (max-width: 1280px)
+    .why
+        &__subtitle
+            margin-bottom: 50px
+        &__list-wrap
+            padding: 0 10px 20px
+        &__list-item
+            margin-right: 0
+
+@media screen and (max-width: 1200px)
+    .why
+        &__list
+            flex-wrap: wrap
+            justify-content: center
+        &__list-item
+            margin-right: 0
+            flex-basis: 50%
+            max-width: 275px
+        &__list-wrap
+            flex-basis: 50%
+    .why-first-item
+        margin-left: auto
+        &::before
+            display: none
+    .why-second-item
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            left: 172px
+            top: 0
+            background: url("../assets/conditions/design.png") no-repeat
+            width: 172px
+            height: 175px
+            transform: translate(0%, -40%) rotate(180deg)
+            z-index: 2
+    .why-third-item
+        position: relative
+        margin-left: auto
+        &::before
+            content: ""
+            position: absolute
+            left: 0
+            bottom: 0
+            background: url("../assets/conditions/design.png") no-repeat
+            width: 172px
+            height: 175px
+            transform: translate(-40%, 40%)
+    .why-fourth-item
+        &::before
+            display: none
+
+@media screen and (max-width: 960px)
+    .why
+        &__title
+            margin-bottom: 10px
+        &__name
+            font-size: 20px
+        &__item
+            font-size: 16px
+
+@media screen and (max-width: 720px)
+    .why
+        &__subtitle
+            margin-bottom: 30px
+
+@media screen and (max-width: 650px)
+    .why
+        &__list-wrap
+            flex-basis: 100%
+        &__list-item
+            margin: 0 auto
+    .why-first-item
+        margin: 0 auto
+        &::before
+            width: 110px
+            height: 110px
+            display: block
+            right: 0
+            left: auto
+            top: 0
+            transform: translate(40%, -40%) rotate(180deg)
+            background-size: 100% 100%
+    .why-second-item
+        margin: 0 auto
+        &::before
+            display: none
+    .why-third-item
+        margin: 0 auto
+        &::before
+            display: none
+    .why-fourth-item
+        margin: 0 auto
+        &::before
+            width: 110px
+            height: 110px
+            display: block
+            bottom: 0
+            top: auto
+            right: auto
+            left: 0
+            transform: translate(-40%, 40%)
+            background-size: 100% 100%
+
+@media screen and (max-width: 425px)
+    .why
+        &__name
+            margin-bottom: 20px
