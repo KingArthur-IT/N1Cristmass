@@ -87,6 +87,10 @@ body {
   line-height: 140%;
 }
 
+.d-none {
+  display: none;
+}
+
 @media screen and (max-width: 1630px) {
   .container {
     max-width: 1280px;
@@ -2213,6 +2217,39 @@ body {
           transform: translateY(2px);
 }
 
+.modal__thanks {
+  background: #fff;
+  max-width: 660px;
+  margin: auto;
+}
+
+.modal__thanks-img {
+  margin-top: -80px;
+  width: 100%;
+}
+
+.modal__thanks-title {
+  text-align: center;
+  font-family: 'Druk Wide';
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: center;
+  color: #101521;
+  margin-bottom: 20px;
+}
+
+.modal__thanks-text {
+  text-align: center;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.modal__thanks-btn {
+  margin: auto;
+  margin-bottom: 50px;
+}
+
 .input-wrapper {
   position: relative;
   margin-bottom: 15px;
@@ -2279,6 +2316,19 @@ body {
   .modal__send-btn {
     margin-bottom: 15px;
   }
+  .modal__thanks {
+    max-width: 600px;
+  }
+  .modal__thanks-img {
+    margin-top: -70px;
+  }
+  .modal__thanks-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  .modal__thanks-text {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -2299,6 +2349,15 @@ body {
   }
   .modal__text {
     margin-bottom: 10px;
+  }
+  .modal__thanks {
+    max-width: 520px;
+  }
+  .modal__thanks-title {
+    font-size: 20px;
+  }
+  .modal__thanks-text {
+    margin-bottom: 20px;
   }
   .input-wrapper {
     margin-bottom: 10px;
@@ -2331,5 +2390,17 @@ body {
   }
   .modal__tab-btn {
     padding: 8px;
+  }
+  .modal__thanks-img {
+    margin-top: -50px;
+  }
+  .modal__thanks-title {
+    margin-top: 30px;
+  }
+  .modal__thanks-text {
+    margin-bottom: 20px;
+  }
+  .modal__thanks-btn {
+    margin-bottom: 30px;
   }
 }

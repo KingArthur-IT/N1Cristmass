@@ -30,6 +30,8 @@ tabBtns.forEach((el, index) => {
 
 //MODAL
 const modal = document.querySelector('.modal');
+const modalForm = document.querySelector('.modal__hero');
+const modalThanks = document.querySelector('.modal__thanks');
 
 document.querySelectorAll('.show-form').forEach((el) => {
     el.addEventListener('click', () => {
@@ -40,13 +42,39 @@ document.querySelectorAll('.show-form').forEach((el) => {
             }, 300);
         }
     })
-})
+});
 
-document.querySelector('.modal__close')?.addEventListener('click', () => {
+const closeModal = () => {
     if (modal){
         modal.classList.remove('visible');
         setTimeout(() => {
             modal.classList.remove('displayed');
         }, 300);
     }
+};
+
+document.querySelector('.modal__close')?.addEventListener('click', () => {
+    closeModal();
 });
+
+['new', 'current'].forEach(el => {
+    document.getElementById(`${el}-partners-send`).addEventListener('click', (e) => {
+        e.preventDefault();
+
+        const companyName = document.getElementById(`${el}-company-name`)?.value;
+        const phone = document.getElementById(`${el}-phone`)?.value;
+        const email = document.getElementById(`${el}-email`)?.value;
+        const message = document.getElementById(`${el}-message`)?.value;
+
+        modalForm.classList.add('d-none');
+        modalThanks.classList.remove('d-none');
+    })    
+});
+
+document.querySelector('.modal__thanks-btn').addEventListener('click', () => {
+    closeModal();
+    setTimeout(() => {
+        modalForm.classList.remove('d-none');
+        modalThanks.classList.add('d-none');
+    }, 300);
+})
