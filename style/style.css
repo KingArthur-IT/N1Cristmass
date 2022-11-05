@@ -1894,6 +1894,17 @@ body {
       flex-basis: 33%;
 }
 
+.footer__info-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 55%;
+      flex-basis: 55%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .footer__logo {
   margin-bottom: 30px;
 }
@@ -1930,4 +1941,81 @@ body {
 
 .footer__socials a {
   margin-right: 16px;
+}
+
+@media screen and (max-width: 960px) {
+  .footer__hero {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .footer__main {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .footer__info-wrap {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin-bottom: 60px;
+  }
+  .footer__home:last-child {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .footer__contacts {
+    margin-top: 0;
+  }
+  .footer__main-text {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .footer__info-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .footer__home:first-child {
+    margin-right: 100px;
+  }
+  .footer__home:nth-child(2) {
+    margin-bottom: 50px;
+  }
+  .footer__home:last-child {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .footer__information {
+    margin-right: 55px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer__home:first-child {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-right: 0;
+  }
+  .footer__home:last-child {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .footer__information {
+    margin-right: 0px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
 }
