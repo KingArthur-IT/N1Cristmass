@@ -27,6 +27,7 @@
         position: absolute
         top: 30px
         left: 0
+        z-index: 2
     &__spiral
         position: absolute
         bottom: 0
@@ -36,3 +37,76 @@
         top: -60px
         right: -150px
         z-index: 3
+
+@media screen and (max-width: 1630px)
+    .join
+        &__trophy
+            width: 300px
+            height: 300px
+            right: -100px
+            top: 0
+        &__coin
+            width: 200px
+            height: 200px
+        &__spiral
+            width: 150px
+            height: 150px
+
+@media screen and (max-width: 1280px)
+    .join
+        &:after
+            transform: rotate(3deg)
+        &__text
+            margin-bottom: 50px
+        &__trophy
+            width: 230px
+            height: 230px
+            right: -80px
+            top: 0
+        &__coin
+            width: 150px
+            height: 150px
+            left: -30px
+        &__spiral
+            width: 150px
+            height: 150px
+
+@media screen and (max-width: 960px)
+    .join
+        &:after
+            transform: rotate(2deg)
+        &__title
+            margin-bottom: 10px
+        &__trophy
+            width: 200px
+            height: 200px
+            right: -50px
+        &__coin
+            width: 100px
+            height: 100px
+            left: -30px
+            top: 80px
+        &__spiral
+            width: 100px
+            height: 100px
+            bottom: 80px
+
+@media screen and (max-width: 720px)
+    .join
+        padding-top: 30px
+        &::after
+            height: 130px
+        &__text
+            margin-bottom: 30px
+        &__trophy
+            display: none
+        &__coin
+            top: 20px
+
+@media screen and (max-width: 425px)
+    .join
+        &__title
+            text-align: left
+        &__btn
+            margin-right: auto
+            margin-left: 0

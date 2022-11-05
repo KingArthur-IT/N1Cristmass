@@ -55,6 +55,8 @@
             width: 5px
             height: 5px
             transform: translateY(-50%)
+    &__trophy
+        display: none
 .why-first-item
     border-radius: 60px 0px 0px 0px
     &::before
@@ -81,6 +83,7 @@
 
 @media screen and (max-width: 1630px)
     .why
+        padding-bottom: 50px
         &__list-item
             padding: 50px 25px
             margin-right: 20px
@@ -104,6 +107,7 @@
 
 @media screen and (max-width: 1200px)
     .why
+        padding-bottom: 30px
         &__list
             flex-wrap: wrap
             justify-content: center
@@ -158,6 +162,13 @@
     .why
         &__subtitle
             margin-bottom: 30px
+        &__trophy
+            display: block
+            position: absolute
+            right: -10px
+            bottom: 0px
+            width: 120px
+            height: 120px
 
 @media screen and (max-width: 650px)
     .why
@@ -165,6 +176,8 @@
             flex-basis: 100%
         &__list-item
             margin: 0 auto
+        &__trophy
+            bottom: 50px
     .why-first-item
         margin: 0 auto
         &::before
@@ -201,3 +214,5 @@
     .why
         &__name
             margin-bottom: 20px
+        &__trophy
+            right: -40px
