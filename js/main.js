@@ -81,6 +81,15 @@ document.querySelectorAll('input').forEach(input => {
     });
 });
 
+['new-company-name', 'new-email', 'new-phone', 'new-message', 
+ 'current-company-name', 'current-email', 'current-message'].forEach(el => {
+     document.getElementById(el).addEventListener('input', (e) => {
+        if (e.target.value != '')
+            document.getElementById(`${el}-label`).classList.add('ontop');
+        else document.getElementById(`${el}-label`).classList.remove('ontop');
+     })
+ });
+
 ['new', 'current'].forEach(el => {
     document.getElementById(`${el}-partners-send`).addEventListener('click', (e) => {
         e.preventDefault();

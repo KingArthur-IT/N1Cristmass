@@ -131,28 +131,41 @@
         width: 100%
         color: $dark
         font-size-adjust: 18px
+        font-size: 16px
         padding: 30px 20px 10px
         outline: none
         caret-color: $primary
         transition: 0.2s
-        &::placeholder
-            color: $dark
-        &:focus::placeholder
-            opacity: 0
+        margin-bottom: 5px
         &.error
             border-color: $primary
             background-color: #ffe9e6
+        &:focus
+            & ~ label
+                font-size: 12px
+                color: #808191
+                top: 10px
     & label
         position: absolute
-        top: 10px
+        top: 23px
         left: 20px
         font-family: 'Exo 2'
         font-weight: 600
-        font-size: 12px
-        line-height: 14px
+        font-size: 14px
+        line-height: 1.2
         text-transform: uppercase
-        color: #808191
+        color: $dark
         z-index: 2
+        transition: all .2s ease
+        pointer-events: none
+        &.ontop
+            font-size: 12px
+            color: #808191
+            top: 10px
+    & p
+        color: #808191
+        font-size: 14px
+        line-height: 1.2
     & textarea
         font-family: 'Exo 2'
         background: $light
@@ -163,6 +176,12 @@
         padding: 30px 20px 10px
         outline: none
         resize: none
+        font-size: 16px
+        &:focus
+            & ~ label
+                font-size: 12px
+                color: #808191
+                top: 10px
 
 @media screen and (max-width: 1630px)
     .modal
@@ -188,6 +207,24 @@
                 margin-bottom: 10px
             &-text
                 margin-bottom: 30px
+    .input-wrapper
+        & textarea
+            padding: 26px 20px 10px
+        & input
+            padding: 26px 20px 10px
+            &:focus ~ label
+                font-size: 10px
+                color: #808191
+                top: 10px
+        & label
+            font-size: 12px
+            &.ontop
+                font-size: 10px
+        & textarea:focus
+            & ~ label
+                font-size: 10px
+        & p
+            font-size: 12px
 
 @media screen and (max-width: 960px)
     .modal
@@ -213,6 +250,23 @@
         margin-bottom: 10px
         &.last
             margin-bottom: 5px
+        & p
+            font-size: 10px
+        & textarea
+            padding: 20px 20px 10px
+        & input
+            padding: 20px 20px 10px
+            font-size: 14px
+            &:focus ~ label
+                font-size: 8px
+        & textarea:focus
+            & ~ label
+                font-size: 8px
+        & label
+            font-size: 10px
+            top: 20px
+            &.ontop
+                font-size: 8px
 
 @media screen and (max-width: 720px)
     .modal
@@ -227,8 +281,15 @@
             text-align: left
         &__subtitle
             text-align: left
+        &__text
+            margin-bottom: 20px
+            text-align: left
         &__form
             padding: 30px 15px
+        & textarea
+            padding: 20px 10px 10px
+        & input
+            padding: 20px 10px 10px
         &__tab-btn
             padding: 8px
         &__thanks
@@ -240,3 +301,6 @@
                 margin-bottom: 20px
             &-btn
                 margin-bottom: 30px
+    .input-wrapper
+        & label
+            left: 11px

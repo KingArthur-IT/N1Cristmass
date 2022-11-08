@@ -70,6 +70,16 @@ body {
   font-weight: 600;
   font-size: 18px;
   font-family: 'Exo 2', sans-serif;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+}
+
+.btn:hover {
+  background: #d61600;
+}
+
+.btn:active {
+  background: #bd1300;
 }
 
 .title {
@@ -848,7 +858,7 @@ body {
 }
 
 .prizes__item-wrap:nth-child(7) {
-  margin-top: -20px;
+  margin-top: 80px;
   margin-bottom: 100px;
 }
 
@@ -2266,43 +2276,13 @@ a.footer__text:hover {
   width: 100%;
   color: #101521;
   font-size-adjust: 18px;
+  font-size: 16px;
   padding: 30px 20px 10px;
   outline: none;
   caret-color: #FF230A;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-
-.input-wrapper input::-webkit-input-placeholder {
-  color: #101521;
-}
-
-.input-wrapper input:-ms-input-placeholder {
-  color: #101521;
-}
-
-.input-wrapper input::-ms-input-placeholder {
-  color: #101521;
-}
-
-.input-wrapper input::placeholder {
-  color: #101521;
-}
-
-.input-wrapper input:focus::-webkit-input-placeholder {
-  opacity: 0;
-}
-
-.input-wrapper input:focus:-ms-input-placeholder {
-  opacity: 0;
-}
-
-.input-wrapper input:focus::-ms-input-placeholder {
-  opacity: 0;
-}
-
-.input-wrapper input:focus::placeholder {
-  opacity: 0;
+  margin-bottom: 5px;
 }
 
 .input-wrapper input.error {
@@ -2310,17 +2290,38 @@ a.footer__text:hover {
   background-color: #ffe9e6;
 }
 
+.input-wrapper input:focus ~ label {
+  font-size: 12px;
+  color: #808191;
+  top: 10px;
+}
+
 .input-wrapper label {
   position: absolute;
-  top: 10px;
+  top: 23px;
   left: 20px;
   font-family: 'Exo 2';
   font-weight: 600;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 14px;
+  line-height: 1.2;
   text-transform: uppercase;
-  color: #808191;
+  color: #101521;
   z-index: 2;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  pointer-events: none;
+}
+
+.input-wrapper label.ontop {
+  font-size: 12px;
+  color: #808191;
+  top: 10px;
+}
+
+.input-wrapper p {
+  color: #808191;
+  font-size: 14px;
+  line-height: 1.2;
 }
 
 .input-wrapper textarea {
@@ -2333,6 +2334,13 @@ a.footer__text:hover {
   padding: 30px 20px 10px;
   outline: none;
   resize: none;
+  font-size: 16px;
+}
+
+.input-wrapper textarea:focus ~ label {
+  font-size: 12px;
+  color: #808191;
+  top: 10px;
 }
 
 @media screen and (max-width: 1630px) {
@@ -2370,6 +2378,29 @@ a.footer__text:hover {
   .modal__thanks-text {
     margin-bottom: 30px;
   }
+  .input-wrapper textarea {
+    padding: 26px 20px 10px;
+  }
+  .input-wrapper input {
+    padding: 26px 20px 10px;
+  }
+  .input-wrapper input:focus ~ label {
+    font-size: 10px;
+    color: #808191;
+    top: 10px;
+  }
+  .input-wrapper label {
+    font-size: 12px;
+  }
+  .input-wrapper label.ontop {
+    font-size: 10px;
+  }
+  .input-wrapper textarea:focus ~ label {
+    font-size: 10px;
+  }
+  .input-wrapper p {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -2406,6 +2437,29 @@ a.footer__text:hover {
   .input-wrapper.last {
     margin-bottom: 5px;
   }
+  .input-wrapper p {
+    font-size: 10px;
+  }
+  .input-wrapper textarea {
+    padding: 20px 20px 10px;
+  }
+  .input-wrapper input {
+    padding: 20px 20px 10px;
+    font-size: 14px;
+  }
+  .input-wrapper input:focus ~ label {
+    font-size: 8px;
+  }
+  .input-wrapper textarea:focus ~ label {
+    font-size: 8px;
+  }
+  .input-wrapper label {
+    font-size: 10px;
+    top: 20px;
+  }
+  .input-wrapper label.ontop {
+    font-size: 8px;
+  }
 }
 
 @media screen and (max-width: 720px) {
@@ -2426,8 +2480,18 @@ a.footer__text:hover {
   .modal__subtitle {
     text-align: left;
   }
+  .modal__text {
+    margin-bottom: 20px;
+    text-align: left;
+  }
   .modal__form {
     padding: 30px 15px;
+  }
+  .modal textarea {
+    padding: 20px 10px 10px;
+  }
+  .modal input {
+    padding: 20px 10px 10px;
   }
   .modal__tab-btn {
     padding: 8px;
@@ -2443,6 +2507,9 @@ a.footer__text:hover {
   }
   .modal__thanks-btn {
     margin-bottom: 30px;
+  }
+  .input-wrapper label {
+    left: 11px;
   }
 }
 

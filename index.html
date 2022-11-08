@@ -454,35 +454,39 @@
                     <div class="text modal__text">Let's get acquainted<span>!</span> </div>
                     <div class="modal__new-partners active">
                         <div class="input-wrapper">
-                            <label>Company name*</label>
-                            <input id="new-company-name" type="text" placeholder="Enter сompany name">
+                            <input id="new-company-name" type="text">
+                            <label id="new-company-name-label">Company name</label>
+                            <p>Enter сompany name</p>
                         </div>
                         <div class="input-wrapper">
-                            <label>Phone*</label>
+                            <input id="new-email" type="email">
+                            <label id="new-email-label">Email*</label>
+                            <p>Enter сompany email</p>
+                        </div>
+                        <div class="input-wrapper">
                             <input id="new-phone" type="text">
-                        </div>
-                        <div class="input-wrapper">
-                            <label>Email*</label>
-                            <input id="new-email" type="email" placeholder="Enter сompany email">
+                            <label id="new-phone-label">Phone*</label>
                         </div>
                         <div class="input-wrapper last">
-                            <label>Message</label>
                             <textarea id="new-message" cols="30" rows="5" ></textarea>
+                            <label id="new-message-label">Message</label>
                         </div>
                         <button id="new-partners-send" class="btn modal__send-btn">Send</button>
                     </div>
                     <div class="modal__current-partners">
                         <div class="input-wrapper">
-                            <label>Company name*</label>
-                            <input id="current-company-name" type="text" placeholder="Сompany name in our partner system">
+                            <input id="current-company-name" type="text">
+                            <label id="current-company-name-label">Company name</label>
+                            <p>Сompany name in our partner system</p>
                         </div>
                         <div class="input-wrapper">
-                            <label>Email*</label>
-                            <input id="current-email" type="email" placeholder="Email name in our partner system">
+                            <input id="current-email" type="email">
+                            <label id="current-email-label">Email*</label>
+                            <p>Email name in our partner system</p>
                         </div>
                         <div class="input-wrapper">
-                            <label>Message</label>
                             <textarea id="current-message" cols="30" rows="5" ></textarea>
+                            <label id="current-message-label">Message</label>
                         </div>
                         <button id="current-partners-send" class="btn modal__send-btn">Send</button>
                     </div>
