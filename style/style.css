@@ -771,12 +771,9 @@ body {
 }
 
 .prizes {
-  background: #101521;
+  background-color: #101521;
   padding: 150px 0 250px;
   overflow: hidden;
-  background: url("../assets/prizes/design/bg.jpg") no-repeat;
-  background-position-y: center;
-  background-size: 100% 100%;
 }
 
 .prizes:before {
@@ -913,13 +910,15 @@ body {
 .prizes__tree {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 30px;
+  width: 240px;
 }
 
 .prizes__box {
   position: absolute;
   bottom: 0;
   left: 0;
+  width: 300px;
 }
 
 .prizes__frost {
@@ -1000,9 +999,7 @@ body {
 
 @media screen and (max-width: 1630px) {
   .prizes {
-    background: url("../assets/prizes/design/bg-1630.png") no-repeat;
-    background-position-y: center;
-    background-size: 100% 100%;
+    background-color: #101521;
   }
   .prizes__item-wrap {
     max-width: 480px;
@@ -1032,13 +1029,6 @@ body {
   }
   .prizes__hero {
     padding-bottom: 15px;
-  }
-  .prizes__tree {
-    width: 240px;
-    right: 30px;
-  }
-  .prizes__box {
-    width: 300px;
   }
   .prizes__top-snow {
     display: block;
@@ -1183,9 +1173,6 @@ body {
 @media screen and (max-width: 960px) {
   .prizes {
     padding: 150px 0 100px;
-    background: url("../assets/prizes/design/bg-960.png") no-repeat;
-    background-position-y: center;
-    background-size: 100% 100%;
   }
   .prizes:before {
     -webkit-transform: rotate(2deg);
@@ -1361,14 +1348,6 @@ body {
     font-size: 14px;
     padding: 5px 15px;
     bottom: 100px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .prizes {
-    background: url("../assets/prizes/design/bg-425.png") no-repeat;
-    background-position-y: center;
-    background-size: cover;
   }
 }
 
@@ -2290,6 +2269,8 @@ a.footer__text:hover {
   padding: 30px 20px 10px;
   outline: none;
   caret-color: #FF230A;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .input-wrapper input::-webkit-input-placeholder {
@@ -2322,6 +2303,11 @@ a.footer__text:hover {
 
 .input-wrapper input:focus::placeholder {
   opacity: 0;
+}
+
+.input-wrapper input.error {
+  border-color: #FF230A;
+  background-color: #ffe9e6;
 }
 
 .input-wrapper label {

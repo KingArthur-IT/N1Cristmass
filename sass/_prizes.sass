@@ -1,10 +1,10 @@
 .prizes
-    background: $dark
+    background-color: $dark
     padding: 150px 0 250px
     overflow: hidden
-    background: url("../assets/prizes/design/bg.jpg") no-repeat
-    background-position-y: center
-    background-size: 100% 100%
+    // background: url("../assets/prizes/design/bg.jpg") no-repeat
+    // background-position-y: center
+    // background-size: 100% 100%
     &:before
         content: ""
         position: absolute
@@ -96,11 +96,13 @@
     &__tree
         position: absolute
         bottom: 0
-        right: 0
+        right: 30px
+        width: 240px
     &__box
         position: absolute
         bottom: 0
         left: 0
+        width: 300px
     &__frost
         position: absolute
         top: 340px
@@ -152,9 +154,10 @@
 
 @media screen and (max-width: 1630px)
     .prizes
-        background: url("../assets/prizes/design/bg-1630.png") no-repeat
-        background-position-y: center
-        background-size: 100% 100%
+        // background: url("../assets/prizes/design/bg-1630.png") no-repeat
+        // background-position-y: center
+        // background-size: 100% 100%
+        background-color: $dark
         &__item-wrap
             max-width: 480px
             max-height: 240px
@@ -176,11 +179,11 @@
             width: 200px
         &__hero
             padding-bottom: 15px
-        &__tree
-            width: 240px
-            right: 30px
-        &__box
-            width: 300px
+        // &__tree
+        //     width: 240px
+        //     right: 30px
+        // &__box
+        //     width: 300px
         &__top-snow
             display: block
             left: 200px
@@ -291,9 +294,9 @@
 @media screen and (max-width: 960px)
     .prizes
         padding: 150px 0 100px
-        background: url("../assets/prizes/design/bg-960.png") no-repeat
-        background-position-y: center
-        background-size: 100% 100%
+        // background: url("../assets/prizes/design/bg-960.png") no-repeat
+        // background-position-y: center
+        // background-size: 100% 100%
         &:before
             transform: rotate(2deg)
             height: 100px
@@ -421,8 +424,8 @@
             padding: 5px 15px
             bottom: 100px
 
-@media screen and (max-width: 425px)
-    .prizes
-        background: url("../assets/prizes/design/bg-425.png") no-repeat
-        background-position-y: center
-        background-size: cover
+// @media screen and (max-width: 425px)
+//     .prizes
+//         background: url("../assets/prizes/design/bg-425.png") no-repeat
+//         background-position-y: center
+//         background-size: cover

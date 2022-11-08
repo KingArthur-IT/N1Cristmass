@@ -1,0 +1,70 @@
+#svg {
+  position: absolute;
+  top: 65px;
+  z-index: 3;
+}
+
+.prizes__background {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 100%;
+  height: 95%;
+  margin: 0 auto;
+}
+.prizes .container {
+  z-index: 5;
+}
+.prizes__box,
+.prizes__tree {
+  z-index: 4;
+}
+.prizes::before {
+  z-index: 3;
+}
+.prizes__background,
+.path {
+  display: none;
+}
+.prizes__background_big,
+.path_big {
+  display: block;
+}
+
+@media (max-width: 1630px) {
+  .prizes__background,
+  .path {
+    display: none;
+  }
+  .prizes__background_1630,
+  .path_1630 {
+    display: block;
+  }
+}
+@media (max-width: 960px) {
+  .prizes__background,
+  .path {
+    display: none;
+  }
+  .prizes__background_960,
+  .path_960 {
+    display: block;
+  }
+}
+@media (max-width: 720px) {
+  .prizes__frost {
+    display: none;
+  }
+}
+@media (max-width: 425px) {
+  .prizes__background,
+  .path {
+    display: none;
+  }
+  .prizes__background_425,
+  .path_425 {
+    display: block;
+  }
+}

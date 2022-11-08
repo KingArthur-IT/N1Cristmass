@@ -75,25 +75,70 @@ document.querySelector('.modal__close')?.addEventListener('click', () => {
     closeModal();
 });
 
+document.querySelectorAll('input').forEach(input => {
+    input?.addEventListener('input', function() {
+        this.classList.remove('error');
+    });
+});
+
 ['new', 'current'].forEach(el => {
     document.getElementById(`${el}-partners-send`).addEventListener('click', (e) => {
         e.preventDefault();
 
         // get values
-        const companyName = document.getElementById(`${el}-company-name`)?.value;
-        const email = document.getElementById(`${el}-email`)?.value;
-        const message = document.getElementById(`${el}-message`)?.value;
+        const companyName = document.getElementById(`${el}-company-name`)?.value.trim();
+        const phone = document.getElementById(`${el}-phone`)?.value.trim();
+        const email = document.getElementById(`${el}-email`)?.value.trim();
+        const message = document.getElementById(`${el}-message`)?.value.trim();
+
+        let error = false;
+        if (!companyName) {
+            document.getElementById(`${el}-company-name`).classList.add('error');
+            error = true;
+        }
+        if (el == 'new' && !phone) {
+            document.getElementById(`${el}-phone`).classList.add('error');
+            error = true;
+        }
+        if (!email) {
+            document.getElementById(`${el}-email`).classList.add('error');
+            error = true;
+        }
+
+        if (error) return;
 
         //send
+        var xhr = new XMLHttpRequest();
 
-        //clear
-        document.getElementById(`${el}-company-name`).value = '';
-        document.getElementById(`${el}-email`).value = '';
-        document.getElementById(`${el}-message`).value = '';
+        var json = JSON.stringify({
+            companyName,
+            phone,
+            email,
+            message,
+            type: el,
+        });
+        console.log(json);
 
-        //show thanks
-        modalForm.classList.add('d-none');
-        modalThanks.classList.remove('d-none');
+        xhr.open("POST", '/include/send_form_christmas.php');
+        xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+
+        xhr.send(json);
+
+        xhr.onload = () => {
+            console.log(xhr);
+            if (xhr.responseText == 'success') {
+                //clear
+                document.getElementById(`${el}-company-name`).value = '';
+                if (el == 'new')
+                    document.getElementById(`${el}-phone`).value = '';
+                document.getElementById(`${el}-email`).value = '';
+                document.getElementById(`${el}-message`).value = '';
+
+                //show thanks
+                modalForm.classList.add('d-none');
+                modalThanks.classList.remove('d-none');
+            }
+        }
     })    
 });
 

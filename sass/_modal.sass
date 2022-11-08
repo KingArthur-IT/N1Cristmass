@@ -134,10 +134,14 @@
         padding: 30px 20px 10px
         outline: none
         caret-color: $primary
+        transition: 0.2s
         &::placeholder
             color: $dark
         &:focus::placeholder
             opacity: 0
+        &.error
+            border-color: $primary
+            background-color: #ffe9e6
     & label
         position: absolute
         top: 10px
